@@ -1,0 +1,251 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Dark Mode */
+
+.container.dark-mode {
+    background-color: rgb(27, 27, 27);
+    color: #ffffff;
+}
+
+.container.dark-mode .notes-app h2{
+    background-color: rgb(52, 52, 52);
+}
+
+.toggle.dark-mode {
+    background-color: rgb(52, 52, 52);
+}
+
+.container.dark-mode .notes-app .notes-item{
+    background-color: rgb(52, 52, 52);
+}
+
+.container.dark-mode .notes-input input, 
+.container.dark-mode .notes-input textarea, 
+.container.dark-mode .notes-input button{
+    color: #ffffff;
+}
+
+.container.dark-mode .notes-input button:hover {
+    color: rgb(64, 133, 230);
+}
+
+.container.dark-mode .searchbar input {
+    color: #ffffff;
+}
+
+/* Light Mode */
+
+.container {
+    background-color: #7a7a7a15;
+    padding: 20px;
+    color: black;
+}
+
+.toggle {
+    color: black;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -1px 2px 9px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 2px 9px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 2px 9px 0px rgba(0,0,0,0.75);
+}
+
+.toggle-img {
+    width: 25px;
+}
+
+.notes-app h2 {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.notes-app h2 span {
+    color: rgb(181, 181, 181);
+}
+
+.notes-input input, textarea, button{
+    border-radius: 5px;
+    font-size: medium;
+    border: solid 1px #707070;
+    color: #000000;
+    background-color: transparent;
+}
+
+.notes-input {
+    margin: 60px 0 80px 0;
+    padding: 0 100px 0 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notes-input p {
+    color: #707070;
+    margin: 0;
+    text-align: right;
+}
+
+.notes-input input {
+    height: 30px;
+    padding: 5px 0 5px 10px;
+}
+
+.notes-input textarea {
+    height: 100px;
+    padding: 10px 0 5px 10px;
+}
+
+.notes-input button {
+    height: 40px;
+}
+
+.notes-input button:hover {
+    color: rgb(64, 133, 230);
+}
+
+.notes-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.separator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.searchbar img {
+    width: 20px;
+    margin: 0 5px;
+}
+
+.searchbar {
+    border: solid 1px #707070;
+    width: max-content;
+    border-radius: 5px;
+    padding: 5px 0 5px 5px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.searchbar input {
+    background-color: transparent;
+    border: none;
+    width: 240px;
+    color: rgb(0, 0, 0);
+    outline: none;
+}
+
+.notes-item {
+    padding: 10px;
+    height: max-content;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.notes-item-date {
+    font-size: 13px;
+    margin-top: 5px;
+    color: #707070;
+}
+
+.notes-item-control {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-around;
+    border-top: solid 1px #707070;
+}
+
+.notes-item-archive {
+    color: rgb(91, 153, 240);
+}
+
+.notes-item-archive:hover {
+    color: rgb(0, 106, 255);
+}
+
+.notes-item-delete {
+    color: rgb(248, 78, 78);
+}
+
+.notes-item-delete:hover {
+    color: rgb(255, 0, 0);
+}
+
+.mid-line {
+    border-left: solid 1px #707070;
+}
+
+.notes-active {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #707070;
+    margin-bottom: 40px;
+}
+
+.alert-text {
+    color: #707070;
+}
+
+.notes-item-title {
+    font-weight: bold;
+    margin: 0;
+}
+
+.notes-item-body {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.notes-item-archive, .notes-item-delete {
+    font-size: medium;
+    border: none;
+}
+
+.notes-active-title {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 20px 120px 20px 120px;
+    }
+
+    .notes-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .notes-input {
+        padding: 0 180px 0 180px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+
+    .notes-input {
+        padding: 0 20px 0 20px;
+    }
+
+    .searchbar input {
+        width: 50%;
+    }
+}
